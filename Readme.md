@@ -8,7 +8,7 @@ conda activate virtual_makeup
 ```
 ### Run on Camera input
 ```
-python camera.py
+python cam.py
 ```
 ### Run on sample image
 ```
