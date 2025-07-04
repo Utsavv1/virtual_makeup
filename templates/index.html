@@ -1,0 +1,42 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Makeup App</title>
+</head>
+<body style="text-align:center;">
+    <h1>Virtual Makeup App</h1>
+
+    <!-- Start Camera Button -->
+    <button id="start-btn" onclick="startCamera()">Start Camera</button>
+
+    <!-- Lipstick Color + Presets -->
+    <div id="extra-options" style="margin-top: 20px; display: none;">
+        <label for="lip-color">🎨 Choose Lipstick Color:</label>
+        <input type="color" id="lip-color" value="#ff0000" />
+
+        <br><br>
+
+        <label for="preset-select">✨ Apply Preset Style:</label>
+        <select id="preset-select">
+            <option value="">-- Select Preset --</option>
+            <option value="natural">Natural</option>
+            <option value="night">Night Look</option>
+            <option value="bold">Bold</option>
+        </select>
+    </div>
+
+    <!-- Makeup Controls (hidden initially) -->
+    <div id="controls" style="display:none;">
+        <h2>Select Makeup Products</h2>
+        <form id="makeup-form">
+            <div id="product-list"></div>
+        </form>
+
+        <h3>Live Camera Feed</h3>
+        <img id="camera" src="" width="640" height="480" />
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
